@@ -39,9 +39,9 @@ RUN install_packages apt-transport-https ca-certificates \
 						# install the tool to rotate logs
 						logrotate
 
-ENV GOSU_VERSION 1.7
-ENV NGINX_VERSION 1.13.0
-ENV PHP_VERSION 7.1
+ENV GOSU_VERSION 1.10
+ENV NGINX_VERSION 1.13.6
+ENV PHP_VERSION 7.1.11
 
 # php installation
 
@@ -251,9 +251,9 @@ ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
 	 org.label-schema.name="Wordpress (Nginx/php-fpm) Docker Container" \
 	 org.label-schema.description="Wordpress container running PHP $PHP_VERSION served by Nginx/php-fpm with caching, TLS encryption, HTTP/2" \
-	 org.label-schema.url="https://github.com/rija/docker-nginx-fpm-caches-wordpress" \
+	 org.label-schema.url="https://github.com/corzel/docker-nginx-fpm-caches-wordpress" \
 	 org.label-schema.vcs-ref=$VCS_REF \
-	 org.label-schema.vcs-url="https://github.com/rija/docker-nginx-fpm-caches-wordpress" \
-	 org.label-schema.vendor="Rija Menage" \
+	 org.label-schema.vcs-url="https://github.com/corzel/docker-nginx-fpm-caches-wordpress" \
+	 org.label-schema.vendor="Mario Monroy" \
 	 org.label-schema.version=$VERSION \
 	 org.label-schema.schema-version="1.0"
