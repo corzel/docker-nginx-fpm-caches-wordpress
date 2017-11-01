@@ -89,8 +89,8 @@ if ! [[ -f /usr/share/nginx/wordpress.sql || -f /usr/share/nginx/wordpress.sql.l
     echo "performed: installed wp-password-bcrypt"
 
     # Wordpress initial setup
-    gosu www-data wp core install --url=https://$SERVER_NAME --title=$SERVER_NAME --admin_user=$ADMIN_USER --admin_email=$ADMIN_EMAIL --admin_password=$ADMIN_PASSWORD
-    echo "performed: wp core install (--url=https://$SERVER_NAME --title=$SERVER_NAME --admin_user=$ADMIN_USER --admin_email=$ADMIN_EMAIL --admin_password=##HIDDEN##)"
+    gosu www-data wp core install --url=https://$SERVER_NAME --title=$SERVER_NAME --admin_user=admin --admin_email=$ADMIN_EMAIL --admin_password=$ADMIN_PASSWORD
+    echo "performed: wp core install (--url=https://$SERVER_NAME --title=$SERVER_NAME --admin_user=admin --admin_email=$ADMIN_EMAIL --admin_password=##HIDDEN##)"
 
 
     # Bootstraping Nginx Helper Wordpress plugin's log
